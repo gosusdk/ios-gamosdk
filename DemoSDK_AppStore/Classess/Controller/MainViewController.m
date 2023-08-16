@@ -322,7 +322,7 @@
     //encode roleName
     roleName = [roleName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     //call to SDK
-        [[GinSDK ServerIdTracking] idAppTrackingOpen:serverID roleID:roleID roleName:roleName];
+    [[GinSDK GTracking] doneNRU:serverID andRoleId:roleID andRoleName:roleName];
 }
 
 - (IBAction) call_Floating:(id)sender
