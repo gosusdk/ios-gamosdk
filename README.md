@@ -17,7 +17,7 @@
 
 # Try It Out
 
-* Download [GinSDK latest and Third party](https://github.com/nerocasten2021/GinSDK_ObjectiveC/releases/)
+**Download the official version: [click here](https://github.com/gosusdk/ios-gamosdk/releases)**
 * GoogleService-Info.plist: send via mail
 * Install the following: App Tracking Transparency framework only available starting from Xcode 12 or later-The SDK supports iOS11+
 
