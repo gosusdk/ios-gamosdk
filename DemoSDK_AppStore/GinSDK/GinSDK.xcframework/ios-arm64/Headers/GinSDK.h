@@ -12,7 +12,6 @@
 
 #import "IdAppTracking.h"
 #import "FacebookManager.h"
-#import "AppsflyerManager.h"
 #import "FirebaseManager.h"
 #import "AppleIAP.h"
 
@@ -22,7 +21,6 @@
 
 + (GTrackingManager *) GTracking;
 + (GinSDK *) sharedInstance;
-+ (AppsflyerManager *) AppsFlyer;
 + (FirebaseManager *) Firebase;
 + (IdAppTracking *) ServerIdTracking;
 + (FacebookManager *) Facebook;

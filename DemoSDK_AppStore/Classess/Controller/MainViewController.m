@@ -346,33 +346,6 @@
     
     [[GinSDK GTracking] trackingEvent:@"user_checkinday_1"];
 }
-
-- (void) callTrackingAFExample {
-    //tracking start trial
-        [[GinSDK AppsFlyer] trackingStartTrialEventOnAF];
-    
-    //tracking Turial Completion
-        [[GinSDK AppsFlyer] trackingTurialCompletedEventOnAF];
-    
-    //tracking Spent Credit
-        [[GinSDK AppsFlyer] trackingSpentCreditEventOnAF:@"gamer_level"];
-    
-    //tracking Level Achieved
-        [[GinSDK AppsFlyer] trackingLevelArchiveEventOnAF:@"gamer_level"];
-    
-    //tracking Achievement unlocked
-        [[GinSDK AppsFlyer] trackingArchiveUnlockEventOnAF:@"gamer_level"];
-}
-
-- (void) callTrackingFirebaseExample {
-    //tracking start trial
-        [[GinSDK Firebase] trackingEventOnFirebase:@"eventName" parameters:@{@"eventEventLogKey":@"eventEventLogValue"}];
-        [[GinSDK Firebase] trackingScreenOnFirebase:@"screenName" screenClass:@"screenClass"];
-        [[GinSDK Firebase] setUserPropertiesOnFirebase:@"userValue" forName:@"usernameName"];
-    //    subscribe
-        [[GinSDK Firebase] FirebaseSubscribeToTopic:@"topicName"];
-        [[GinSDK Firebase] FirebaseUnSubscribeToTopic:@"topicName"];
-}
 - (void)encodeWithCoder:(nonnull NSCoder *)coder {
 
     

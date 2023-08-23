@@ -14,16 +14,17 @@
 
 + (AppsflyerManager *) sharedInstance;
 - (void) initAppsFlyer;
+- (void) initAppsFlyer:(NSString *)appFlyerKey andAppleId:(NSString *)appFlyerAppleID;
 - (void) startAppsflyer;
 - (void) startAppsflyerWithInterval;
 - (void) setCustomerUserID:(NSString *)customerUserID;
 - (void) trackingLaunchOnAF;
+- (void) trackingLogin:(NSString *)userId andUsername:(NSString *)username andEmail:(NSString *)email;
+- (void) trackingCheckout:(NSString *)orderId andProductId:(NSString *)productId andAmount:(NSString *)amount andCurrency:(NSString *)currency andUsername:(NSString *)username;
+- (void) trackingPurchase:(NSString *)orderId andProductId:(NSString *)productId andAmount:(NSString *)amount andCurrency:(NSString *)currency andUsername:(NSString *)username;
 - (void) trackingUninstallOnAF:(NSData *)deviceToken;
-- (void) trackingEventOnAF:(NSString *)eventName withValues:(NSDictionary*)values;
+- (void) trackingEvent:(NSString *)eventName withValues:(NSDictionary*)values;
 //call from game client
-- (void) trackingTurialCompletedEventOnAF;
-- (void) trackingLevelArchiveEventOnAF:(NSString *)level;
-- (void) trackingArchiveUnlockEventOnAF:(NSString *)level;
-- (void) trackingSpentCreditEventOnAF:(NSString *)level;
-- (void) trackingStartTrialEventOnAF;
+- (void)trackingStartTrial;
+- (void) trackingTurialCompleted;
 @end
