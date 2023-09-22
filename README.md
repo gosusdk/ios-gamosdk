@@ -277,6 +277,14 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 [[GinSDK sharedInstance] IDSignOut:self];
 //use as Logout Delegate
 ```
+
+## Delete Account API
+```objectivec
+[[GinSDK sharedInstance] deleteAcount:self andCallback:^(NSDictionary *response) {
+    NSLog(@"response = %@", response);
+}];
+```
+
 ## Using IAP
 *** appleSecret default is empty (ex: @""), this will change when we send the request to you
   
