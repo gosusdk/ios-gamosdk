@@ -31,8 +31,11 @@
   - SystemConfiguration.framework
   - MessageUI.framework
   - Accelerate.framework
-  - AdSupport.framework
-  - AppTrackingTransparency.framework
+  - **AdSupport.framework**
+  - **AppTrackingTransparency.framework**
+  - **AdServices.framework**
+  - **StoreKit.framework**
+  - **iAd.framework**
 - Adding Capabilities: Sign-in with Apple, Push Notifications
 
 ### With Facebook IOS SDK version 13 or latest
