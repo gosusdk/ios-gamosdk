@@ -155,7 +155,6 @@
     //your code
     
     //GinSDK
-    [[GinSDK sharedInstance] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
     [[GinSDK sharedInstance] initSdk:^(NSString *initStatus) {
         NSLog(@"initStatus = %@", initStatus);
         if ([initStatus isEqual:@"success"]) {
@@ -164,6 +163,7 @@
             NSLog(@"Gin init failed");
         }
     }];
+    [[GinSDK sharedInstance] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 ```
