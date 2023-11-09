@@ -31,8 +31,11 @@
   - SystemConfiguration.framework
   - MessageUI.framework
   - Accelerate.framework
-  - AdSupport.framework
-  - AppTrackingTransparency.framework
+  - **AdSupport.framework**
+  - **AppTrackingTransparency.framework**
+  - **AdServices.framework**
+  - **StoreKit.framework**
+  - **iAd.framework**
 - Adding Capabilities: Sign-in with Apple, Push Notifications
 
 ### With Facebook IOS SDK version 13 or latest
@@ -152,7 +155,6 @@
     //your code
     
     //GinSDK
-    [[GinSDK sharedInstance] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
     [[GinSDK sharedInstance] initSdk:^(NSString *initStatus) {
         NSLog(@"initStatus = %@", initStatus);
         if ([initStatus isEqual:@"success"]) {
@@ -161,6 +163,7 @@
             NSLog(@"Gin init failed");
         }
     }];
+    [[GinSDK sharedInstance] applicationDelegate:self andApplication:application didFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 ```
@@ -277,6 +280,14 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 [[GinSDK sharedInstance] IDSignOut:self];
 //use as Logout Delegate
 ```
+
+## Delete Account API
+```objectivec
+[[GinSDK sharedInstance] deleteAcount:self andCallback:^(NSDictionary *response) {
+    NSLog(@"response = %@", response);
+}];
+```
+
 ## Using IAP
 *** appleSecret default is empty (ex: @""), this will change when we send the request to you
   
