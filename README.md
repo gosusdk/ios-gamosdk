@@ -74,7 +74,7 @@
 ### Configure GoogleSignIn in your project (default info.plist)
   ** Refer [Get started with Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) **
   ```xml
-   <key>GoogleAppID</key>
+   <key>GIDClientID</key>
    <string>1234567890-abcdefg.apps.googleusercontent.com</string>
    <key>CFBundleURLTypes</key>
    <array>
