@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ABInstallEvent : ABEvent
 
 - (instancetype)init;
-- (void)setAppleSearchAds:(NSDictionary*)appleSearchAds;
+
 - (void)setAppleSearchAdsToken:(NSString*)appleSearchAdsToken;
 
 @end

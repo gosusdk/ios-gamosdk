@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ABDeeplinkInstallEvent : ABEvent
 
 - (instancetype)init;
+
 - (void)setDeeplink:(NSString*)deeplink;
-- (void)setAppleSearchAds:(NSDictionary*)appleSearchAds;
 - (void)setAppleSearchAdsToken:(NSString*)appleSearchAdsToken;
 
 @end

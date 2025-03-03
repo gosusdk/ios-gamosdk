@@ -65,7 +65,8 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     //reset owner billing had payment
-    [[GinSDK AppleIAP] terminateIAP];
+    //[[GinSDK AppleIAP] terminateIAP];
+    [[GinSDK GPayment] terminateIAP];
 }
 
 // [START refresh_token]
