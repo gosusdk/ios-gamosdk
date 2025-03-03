@@ -2,10 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AirbAppName</key>
+	<string>standlegend</string>
+	<key>AirbAppToken</key>
+	<string>d558e7e2825144c29c89e18373a52600</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
-	<string>TienKiemKyHiep</string>
+	<string>Demo 9871</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -44,13 +48,9 @@
 	<key>FacebookDisplayName</key>
 	<string>Liên Minh Bảo Bối</string>
 	<key>GameClientID</key>
-	<string>m932.ioycdkkwdypqdav</string>
+	<string>9871.hbxleyvrqfyfbec</string>
 	<key>GameSdkSignature</key>
 	<string>xvdxciykvxuffvntivpj</string>
-    <key>AirbAppName</key>
-    <string>standlegend</string>
-    <key>AirbAppToken</key>
-    <string>d558e7e2825144c29c89e18373a52600</string>
 	<key>GoogleAppID</key>
 	<string>599125603004-1ro52uln95jfuc59bku4tapv5iah29jf.apps.googleusercontent.com</string>
 	<key>LSApplicationQueriesSchemes</key>
