@@ -64,14 +64,6 @@
 <key>GameSdkSignature</key>
 <string>GameSDKSignature</string>
 ```
-
-### Configure Airbridge in your project (default info.plist)
-  ```xml
-    <key>AirbAppName</key>
-    <string>sdkgosutest</string>
-    <key>AirbAppToken</key>
-    <string>d878da2af447440385fe9a4fe37b06a0</string>
-```
 ### Configure GoogleSignIn in your project (default info.plist)
   ** Refer [Get started with Google Sign-In for iOS](https://developers.google.com/identity/sign-in/ios/start-integrating) **
   ```xml
@@ -87,7 +79,6 @@
     </dict>
    </array>
   ```
-  
 ### Configure FacebookSDK in your project (default info.plist)
 ** Refer [Facebook get started](https://developers.facebook.com/docs/ios/getting-started#step-2---configure-your-project) **
 ```xml
@@ -129,6 +120,17 @@
 * In the key FacebookClientToken, replace CLIENT-TOKEN 
 * In the key FacebookDisplayName, replaceAPP-NAME with the name of provided.
 
+### Configure ItsSDK in your project (default info.plist)
+- Configure ItsSDK module tracking into .plist file (default: info.plist)*. IN the <string> tag, keys config will be provided privately via email
+  ```xml
+	  <key>ItsMode</key>
+	  <string>TEST</string>
+	  <key>ItsSigningKey</key>
+	  <string>sample_value</string>
+	  <key>ItsWriteKey</key>
+	  <string>sample_value</string>
+  ```
+  
 ### Add services and SDK related resource library
 1. The file Appdelegate.m configuration instructions are as follows:
 ```objectivec
@@ -310,24 +312,14 @@ IAPDataRequest *iapData = [[IAPDataRequest alloc]
 
 # API Tracking Events
 
-```objectivec
-  - (void) callGTrackingExample {
-      //tracking start trial
-      [[GinSDK GTracking] trackingStartTrial];
-      
-      //tracking Turial Completion
-      [[GinSDK GTracking] trackingTurialCompleted];
-      
-      [[GinSDK GTracking] trackingEvent:@"level_20"];
-      
-      [[GinSDK GTracking] trackingEvent:[NSString stringWithFormat:@"level_%d", 20]];
-      
-      [[GinSDK GTracking] doneNRU:@"server_id" andRoleId:@"role_id" andRoleName:@"role_name"];
-      
-      [[GinSDK GTracking] trackingEvent:@"level_20" withValues:@{@"customerId": @"12345"}];
-      
-      [[GinSDK GTracking] trackingEvent:@"user_checkinday_1"];
-  }
 ```
-  
+USAGE TRACKING
+--------------------
+The SDK supports tracking in-app events. To use it, you need to implement the `GItsTrackingManager` module. For detailed information, refer to the code example below.
+```objectivec
+  [[GinSDK GTracking] completeRegistration:@"user_id"];
+  [[GinSDK GTracking] trackingTurialCompleted];
+```  
+For detailed information on tracking events, please refer to the [Tracking Guide](./TRACKING_GUIDE.md).
 By using the GinSDK for iOS you agree to these terms.
+
