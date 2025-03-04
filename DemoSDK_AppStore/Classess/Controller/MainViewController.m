@@ -331,19 +331,30 @@
 
 - (void) callGTrackingExample {
     //tracking start trial
-    [[GinSDK GTracking] trackingStartTrial];
-    
-    //tracking Turial Completion
-    [[GinSDK GTracking] trackingTurialCompleted];
-    
-    [[GinSDK GTracking] trackingEvent:@"level_20"];
-    
-    [[GinSDK GTracking] trackingEvent:[NSString stringWithFormat:@"level_%d", 20]];
-    
-    [[GinSDK GTracking] doneNRU:@"server_id" andRoleId:@"role_id" andRoleName:@"role_name"];
-    
-    [[GinSDK GTracking] trackingEvent:@"level_20" withValues:@{@"customerId": @"12345"}];
-    
+//    [[GinSDK GTracking] trackingStartTrial];
+//    
+//    //tracking Turial Completion
+//    [[GinSDK GTracking] trackingTurialCompleted];
+//    
+//    [[GinSDK GTracking] trackingEvent:@"level_20"];
+//    
+//    [[GinSDK GTracking] trackingEvent:[NSString stringWithFormat:@"level_%d", 20]];
+//    
+//    [[GinSDK GTracking] doneNRU:@"server_id" andRoleId:@"role_id" andRoleName:@"role_name"];
+//    
+//    [[GinSDK GTracking] trackingEvent:@"level_20" withValues:@{@"customerId": @"12345"}];
+//    
+//    [[GinSDK GTracking] trackingEvent:@"user_checkinday_1"];
+    [[GinSDK GTracking] createNewCharacter:@"server01" andRoleId:@"character01" andRoleName:@"character01Name"];
+    [[GinSDK GTracking] enterGame:@"toantest" characterID:@"character01" characterName:@"character01Name" serverInfo:@"server01"];
+    [[GinSDK GTracking] startTutorial: @"user01"  andCharacterID:@"character01" andCharacterName:@"character01Name" andServerInfo:@"server01"];
+    [[GinSDK GTracking] completeTutorial: @"user01"  andCharacterID:@"character01" andCharacterName:@"character01Name" andServerInfo:@"server01"];
+    [[GinSDK GTracking] checkout:@"orderid_001" andProductId:@"product_id001" andAmount:@"10000" andCurrency:@"VND" andUsername:@"toantest"];
+    [[GinSDK GTracking] purchase:@"orderid_001" andProductId:@"product_id001" andAmount:@"10000" andCurrency:@"VND" andUsername:@"toantest"];
+    [[GinSDK GTracking] levelUp:@"toantest" characterID:@"character01" serverInfo:@"server01" level:10];
+    [[GinSDK GTracking] vipUp:@"toantest" characterID:@"character01" serverInfo:@"server01" vipLevel:2];
+    [[GinSDK GTracking] useItem:@"toantest" characterID:@"character01" serverInfo:@"server01" itemID:@"item01" quantity:1];
+    [[GinSDK GTracking] trackActivityResult:@"toantest" characterID:@"character01" serverInfo:@"server01" activityID: @"activityid_01" activityResult:@"success!"];
     [[GinSDK GTracking] trackingEvent:@"user_checkinday_1"];
 }
 - (void)encodeWithCoder:(nonnull NSCoder *)coder {

@@ -53,6 +53,12 @@
 	<string>xvdxciykvxuffvntivpj</string>
 	<key>GoogleAppID</key>
 	<string>599125603004-1ro52uln95jfuc59bku4tapv5iah29jf.apps.googleusercontent.com</string>
+	<key>ItsMode</key>
+	<string>TEST</string>
+	<key>ItsSigningKey</key>
+	<string>deb0e072766b476db91e40332ccd228a</string>
+	<key>ItsWriteKey</key>
+	<string>2tnUe2c50h2jlY1vkH4IWHIqBkR</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
