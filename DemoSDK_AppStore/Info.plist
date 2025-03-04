@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AirbAppName</key>
-	<string>standlegend</string>
-	<key>AirbAppToken</key>
-	<string>d558e7e2825144c29c89e18373a52600</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
@@ -56,9 +52,9 @@
 	<key>ItsMode</key>
 	<string>TEST</string>
 	<key>ItsSigningKey</key>
-	<string>deb0e072766b476db91e40332ccd228a</string>
+	<string>sample_value</string>
 	<key>ItsWriteKey</key>
-	<string>2tnUe2c50h2jlY1vkH4IWHIqBkR</string>
+	<string>sample_value</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
