@@ -7,7 +7,7 @@
   - Third-party framework: 
       - GoogleSigin SDK, Firebase SDK, Facebook SDK, AppsFlyer SDK
       - Grpc Framework (GRPCClient, ProtoBuf, ProtoRPC, RxLibrary, ...)
-      - Download at : (https://drive.google.com/file/d/1yzhCgzwG2cvShWauk0DLelxVTJbf-2Ae/view?usp=drive_link)
+      - Download at : (https://drive.google.com/file/d/1bLdr7t9aOD05W5nR4l_vESndFj47gsdt/view?usp=sharing)
   - Ios version support: 11+
   
 ### FEATURES:
@@ -130,7 +130,16 @@
 	  <key>ItsWriteKey</key>
 	  <string>sample_value</string>
   ```
-  
+### Configure AirBidge in your project (default info.plist)
+- Configure AirBidgeSDK module tracking into .plist file (default: info.plist)*. IN the <string> tag, keys config will be provided privately via email
+  ```xml
+	  <key>AirbAppEnv</key>
+	  <string></string>
+	  <key>AirbAppName</key>
+	  <string>sample_value</string>
+	  <key>AirbAppToken</key>
+	  <string>sample_value</string>
+  ```
 ### Add services and SDK related resource library
 1. The file Appdelegate.m configuration instructions are as follows:
 ```objectivec

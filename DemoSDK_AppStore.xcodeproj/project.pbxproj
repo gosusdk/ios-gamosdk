@@ -99,6 +99,8 @@
 		125BEFA52D76BE9D00A59B79 /* FirebaseRemoteConfigInterop.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE9B2D75BDAE00A59B79 /* FirebaseRemoteConfigInterop.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		125BEFA62D76BE9F00A59B79 /* FirebaseRemoteConfig.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE9A2D75BDAE00A59B79 /* FirebaseRemoteConfig.xcframework */; };
 		125BEFA72D76BE9F00A59B79 /* FirebaseRemoteConfig.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE9A2D75BDAE00A59B79 /* FirebaseRemoteConfig.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6296370E2D7FE07600F750C7 /* AirBridge.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */; };
+		6296370F2D7FE07600F750C7 /* AirBridge.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A5528C3211B324700F7E933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5528C2211B324700F7E933 /* LaunchScreen.storyboard */; };
 		8A5528C5211B330000F7E933 /* ap_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5528C4211B330000F7E933 /* ap_logo.png */; };
 		8A8334DD21006C00007200B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A8334DC21006C00007200B0 /* AppDelegate.m */; };
@@ -121,6 +123,7 @@
 				125BEF612D76BE5500A59B79 /* FirebaseCore.xcframework in Embed Frameworks */,
 				125BEF632D76BE5600A59B79 /* FirebaseCoreExtension.xcframework in Embed Frameworks */,
 				125BEF752D76BE6D00A59B79 /* Rudder.xcframework in Embed Frameworks */,
+				6296370F2D7FE07600F750C7 /* AirBridge.xcframework in Embed Frameworks */,
 				125BEF792D76BE7000A59B79 /* ProtoRPC.xcframework in Embed Frameworks */,
 				125BEF4F2D76BE4100A59B79 /* AppAuth.xcframework in Embed Frameworks */,
 				125BEF952D76BE8D00A59B79 /* GoogleUtilities.xcframework in Embed Frameworks */,
@@ -212,6 +215,7 @@
 		125BEF422D76BDA300A59B79 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		125BEF432D76BDA300A59B79 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
 		125BEF442D76BDA300A59B79 /* FBSDKLoginKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKLoginKit.xcframework; sourceTree = "<group>"; };
+		6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:W378YHH57B:ab180 Inc."; lastKnownFileType = wrapper.xcframework; path = AirBridge.xcframework; sourceTree = "<group>"; };
 		8A5528C2211B324700F7E933 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A5528C4211B330000F7E933 /* ap_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ap_logo.png; sourceTree = "<group>"; };
 		8A8334D821006C00007200B0 /* TienKiemMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TienKiemMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +267,7 @@
 				125BEF642D76BE5A00A59B79 /* FirebaseCoreInternal.xcframework in Frameworks */,
 				125BEF6E2D76BE6500A59B79 /* RxLibrary.xcframework in Frameworks */,
 				125BEF6A2D76BE5F00A59B79 /* FirebaseMessaging.xcframework in Frameworks */,
+				6296370E2D7FE07600F750C7 /* AirBridge.xcframework in Frameworks */,
 				125BEFA02D76BE9800A59B79 /* FirebaseSharedSwift.xcframework in Frameworks */,
 				125BEF4E2D76BE4100A59B79 /* AppAuth.xcframework in Frameworks */,
 				125BEF942D76BE8D00A59B79 /* GoogleUtilities.xcframework in Frameworks */,
@@ -399,6 +404,7 @@
 		125BEEAB2D75BDAE00A59B79 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */,
 				125BEF452D76BDA300A59B79 /* FacebookSDKv17 */,
 				125BEEAA2D75BDAE00A59B79 /* Firebase */,
 			);
