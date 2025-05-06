@@ -69,8 +69,6 @@
 		125BEF852D76BE7D00A59B79 /* MetricsReporter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE802D75BDAE00A59B79 /* MetricsReporter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		125BEF862D76BE7F00A59B79 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A83352521006DCC007200B0 /* MessageUI.framework */; };
 		125BEF882D76BE8000A59B79 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9A52CF212D1C6D0097A25C /* MediaPlayer.framework */; };
-		125BEF8A2D76BE8200A59B79 /* ItsSDK-1.0.0-Release.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE7F2D75BDAE00A59B79 /* ItsSDK-1.0.0-Release.xcframework */; };
-		125BEF8B2D76BE8200A59B79 /* ItsSDK-1.0.0-Release.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE7F2D75BDAE00A59B79 /* ItsSDK-1.0.0-Release.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		125BEF8C2D76BE8800A59B79 /* GTMSessionFetcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEEA52D75BDAE00A59B79 /* GTMSessionFetcher.xcframework */; };
 		125BEF8D2D76BE8800A59B79 /* GTMSessionFetcher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEEA52D75BDAE00A59B79 /* GTMSessionFetcher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		125BEF8E2D76BE8900A59B79 /* GTMAppAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEEA42D75BDAE00A59B79 /* GTMAppAuth.xcframework */; };
@@ -99,6 +97,8 @@
 		125BEFA52D76BE9D00A59B79 /* FirebaseRemoteConfigInterop.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE9B2D75BDAE00A59B79 /* FirebaseRemoteConfigInterop.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		125BEFA62D76BE9F00A59B79 /* FirebaseRemoteConfig.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE9A2D75BDAE00A59B79 /* FirebaseRemoteConfig.xcframework */; };
 		125BEFA72D76BE9F00A59B79 /* FirebaseRemoteConfig.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 125BEE9A2D75BDAE00A59B79 /* FirebaseRemoteConfig.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		624D436D2DC9C5EA006FDF0B /* ItsSDK(v.1.1.0).xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624D436C2DC9C5EA006FDF0B /* ItsSDK(v.1.1.0).xcframework */; };
+		624D436E2DC9C5F9006FDF0B /* ItsSDK(v.1.1.0).xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 624D436C2DC9C5EA006FDF0B /* ItsSDK(v.1.1.0).xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6296370E2D7FE07600F750C7 /* AirBridge.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */; };
 		6296370F2D7FE07600F750C7 /* AirBridge.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8A5528C3211B324700F7E933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A5528C2211B324700F7E933 /* LaunchScreen.storyboard */; };
@@ -120,6 +120,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				624D436E2DC9C5F9006FDF0B /* ItsSDK(v.1.1.0).xcframework in Embed Frameworks */,
 				125BEF612D76BE5500A59B79 /* FirebaseCore.xcframework in Embed Frameworks */,
 				125BEF632D76BE5600A59B79 /* FirebaseCoreExtension.xcframework in Embed Frameworks */,
 				125BEF752D76BE6D00A59B79 /* Rudder.xcframework in Embed Frameworks */,
@@ -135,7 +136,6 @@
 				125BEF6F2D76BE6500A59B79 /* RxLibrary.xcframework in Embed Frameworks */,
 				125BEF652D76BE5A00A59B79 /* FirebaseCoreInternal.xcframework in Embed Frameworks */,
 				125BEF5B2D76BE4D00A59B79 /* FBSDKLoginKit.xcframework in Embed Frameworks */,
-				125BEF8B2D76BE8200A59B79 /* ItsSDK-1.0.0-Release.xcframework in Embed Frameworks */,
 				125BEFA52D76BE9D00A59B79 /* FirebaseRemoteConfigInterop.xcframework in Embed Frameworks */,
 				125BEF912D76BE8B00A59B79 /* GRPCClient.xcframework in Embed Frameworks */,
 				125BEF5F2D76BE5000A59B79 /* FirebaseAnalytics.xcframework in Embed Frameworks */,
@@ -180,7 +180,6 @@
 		125BEE7B2D75BDAE00A59B79 /* Protobuf_Privacy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Protobuf_Privacy.bundle; sourceTree = "<group>"; };
 		125BEE7C2D75BDAE00A59B79 /* ProtoRPC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ProtoRPC.xcframework; sourceTree = "<group>"; };
 		125BEE7D2D75BDAE00A59B79 /* RxLibrary.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RxLibrary.xcframework; sourceTree = "<group>"; };
-		125BEE7F2D75BDAE00A59B79 /* ItsSDK-1.0.0-Release.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "ItsSDK-1.0.0-Release.xcframework"; sourceTree = "<group>"; };
 		125BEE802D75BDAE00A59B79 /* MetricsReporter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = MetricsReporter.xcframework; sourceTree = "<group>"; };
 		125BEE812D75BDAE00A59B79 /* RSCrashReporter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RSCrashReporter.xcframework; sourceTree = "<group>"; };
 		125BEE822D75BDAE00A59B79 /* Rudder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Rudder.xcframework; sourceTree = "<group>"; };
@@ -215,6 +214,7 @@
 		125BEF422D76BDA300A59B79 /* FBSDKCoreKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKCoreKit.xcframework; sourceTree = "<group>"; };
 		125BEF432D76BDA300A59B79 /* FBSDKCoreKit_Basics.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKCoreKit_Basics.xcframework; sourceTree = "<group>"; };
 		125BEF442D76BDA300A59B79 /* FBSDKLoginKit.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:V9WTTPBFK9:Meta Platforms, Inc."; lastKnownFileType = wrapper.xcframework; path = FBSDKLoginKit.xcframework; sourceTree = "<group>"; };
+		624D436C2DC9C5EA006FDF0B /* ItsSDK(v.1.1.0).xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "ItsSDK(v.1.1.0).xcframework"; sourceTree = "<group>"; };
 		6296370B2D7FDBE600F750C7 /* AirBridge.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:W378YHH57B:ab180 Inc."; lastKnownFileType = wrapper.xcframework; path = AirBridge.xcframework; sourceTree = "<group>"; };
 		8A5528C2211B324700F7E933 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A5528C4211B330000F7E933 /* ap_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ap_logo.png; sourceTree = "<group>"; };
@@ -253,6 +253,7 @@
 				125BEF7C2D76BE7500A59B79 /* Promises.xcframework in Frameworks */,
 				125BEF9C2D76BE9500A59B79 /* GoogleAppMeasurement.xcframework in Frameworks */,
 				125BEF982D76BE9000A59B79 /* GoogleDataTransport.xcframework in Frameworks */,
+				624D436D2DC9C5EA006FDF0B /* ItsSDK(v.1.1.0).xcframework in Frameworks */,
 				125BEF722D76BE6C00A59B79 /* RudderKit.xcframework in Frameworks */,
 				125BEF8C2D76BE8800A59B79 /* GTMSessionFetcher.xcframework in Frameworks */,
 				125BEF962D76BE8F00A59B79 /* GoogleSignIn.xcframework in Frameworks */,
@@ -275,7 +276,6 @@
 				125BEF5A2D76BE4D00A59B79 /* FBSDKLoginKit.xcframework in Frameworks */,
 				125BEF502D76BE4400A59B79 /* AuthenticationServices.framework in Frameworks */,
 				125BEF602D76BE5500A59B79 /* FirebaseCore.xcframework in Frameworks */,
-				125BEF8A2D76BE8200A59B79 /* ItsSDK-1.0.0-Release.xcframework in Frameworks */,
 				125BEF622D76BE5600A59B79 /* FirebaseCoreExtension.xcframework in Frameworks */,
 				125BEF682D76BE5C00A59B79 /* FirebaseInstallations.xcframework in Frameworks */,
 				125BEF742D76BE6D00A59B79 /* Rudder.xcframework in Frameworks */,
@@ -319,7 +319,7 @@
 		125BEE842D75BDAE00A59B79 /* its_frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				125BEE7F2D75BDAE00A59B79 /* ItsSDK-1.0.0-Release.xcframework */,
+				624D436C2DC9C5EA006FDF0B /* ItsSDK(v.1.1.0).xcframework */,
 				125BEE802D75BDAE00A59B79 /* MetricsReporter.xcframework */,
 				125BEE812D75BDAE00A59B79 /* RSCrashReporter.xcframework */,
 				125BEE822D75BDAE00A59B79 /* Rudder.xcframework */,
