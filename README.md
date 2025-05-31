@@ -54,11 +54,21 @@
   <key>NSUserTrackingUsageDescription</key>
   <string>This identifier will be used to deliver personalized ads to you.</string>
   ```
+- Configure ServerInfo into .plist file (default: info.plist)*. IN the <string> tag, key ServerInfo will be provided privately via email
+```xml
+<key>ServerAddress</key>
+<string>server_address_value</string>
+<key>ServerPort</key>
+<string>server_port_value</string>
+<key>NegotiationType</key>
+<string>negotiation_type_value</string>
+```
 - Configure GameClientID into .plist file (default: info.plist)*. IN the <string> tag, key GameClientID will be provided privately via email
 ```xml
 <key>GameClientID</key>
 <string>GameClientID</string>
 ```
+
 - Configure GameSdkSignature into .plist file (default: info.plist)*. IN the <string> tag, key GameSdkSignature will be provided privately via email
 ```xml
 <key>GameSdkSignature</key>

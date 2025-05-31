@@ -11,7 +11,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
-	<string>Demo(v.140)</string>
+	<string>Demo(v.142)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,7 +19,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Demo(v.140)</string>
+	<string>Demo(v.142)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -50,13 +50,13 @@
 	<key>FacebookDisplayName</key>
 	<string>Liên Minh Bảo Bối</string>
 	<key>GameClientID</key>
-	<string>sample_value</string>
+	<string>9952_samplevalue</string>
 	<key>GameSdkSignature</key>
 	<string>xvdxciykvxuffvntivpj</string>
 	<key>GoogleAppID</key>
 	<string>599125603004-1ro52uln95jfuc59bku4tapv5iah29jf.apps.googleusercontent.com</string>
 	<key>ItsMode</key>
-	<string>TEST</string>
+	<string>LIVE</string>
 	<key>ItsSigningKey</key>
 	<string>sample_value</string>
 	<key>ItsWriteKey</key>
@@ -88,6 +88,8 @@
 	</dict>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This identifier will be used to deliver personalized ads to you.</string>
+	<key>NegotiationType</key>
+	<string>default</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -95,6 +97,10 @@
 			<string>cstr6suwn9.skadnetwork</string>
 		</dict>
 	</array>
+	<key>ServerAddress</key>
+	<string>sample_value</string>
+	<key>ServerPort</key>
+	<string>443</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
