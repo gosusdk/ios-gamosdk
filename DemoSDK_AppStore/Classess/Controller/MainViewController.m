@@ -98,7 +98,6 @@
                 [self.btn_shareVideo setHidden:NO];
                 [self.btn_clear setHidden:NO];
                 [self.btn_IAP setHidden:NO];
-                [self.btn_topup setHidden:NO];
                 [self.btn_clear setTitle:@"(9) Logout" forState:UIControlStateNormal];
     
                 [self callGTrackingExample];
@@ -156,7 +155,6 @@
     [_btn_shareVideo setHidden:YES];
     [_btn_clear setHidden:YES];
     [_btn_IAP setHidden:YES];
-    [_btn_topup setHidden:YES];
     [_aiv_loading stopAnimating];
     //
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayFCMToken:) name:@"FCMToken" object:nil];
@@ -199,25 +197,7 @@
     else
         [popup showFromRect:_btn_IAP.frame inView:self.view animated:YES];
 }
-//=========== WebView TopUp Test ==============//
-- (IBAction) callTopUp:(id)sender
-{
-    // Create test topup object
-    GameItemWebTopupObject *topupInfo = [[GameItemWebTopupObject alloc] init];
-    
-    // Set test data
-//    topupInfo.characterID = @"10000331";
-//    topupInfo.characterName = @"SimbaNguyen";
-//    topupInfo.serverID = @"200";
-//    topupInfo.productID = @"com.cmc.dragonsaga.250";
-//    topupInfo.productName = @"250 YB";
-//    topupInfo.amount = @"1";
-//    topupInfo.extraInfo = @"99991742458522940|59";
-        
 
-    // Show topup with listener
-    [GinSDK showTopUp:topupInfo andListener:self];
-}
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
     if(buttonIndex >= 3)
         return;
@@ -347,7 +327,6 @@
     [_btn_shareVideo setHidden:YES];
     [_btn_clear setHidden:YES];
     [_btn_IAP setHidden:YES];
-    [_btn_topup setHidden:YES];
     [[GinSDK sharedInstance] IDSignOut:nil];
     [[GinSDK sharedInstance] showSignInView:self andResultDelegate:self];
 }
