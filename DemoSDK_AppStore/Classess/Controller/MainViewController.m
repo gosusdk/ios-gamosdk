@@ -18,50 +18,99 @@
 @implementation MainViewController
 
 #pragma Login Delegate
-- (void)loginSuccess:(NSString *)userID andUserName:(NSString *)userName andAccessToken:(NSString *)access_token
+#pragma mark - Login Delegate
+//migate login success to GinSDK 2.0.0
+//- (void)loginSuccess:(NSString *)userID andUserName:(NSString *)userName andAccessToken:(NSString *)access_token
+//{
+//    //result for game
+//    /*
+//     userID
+//     userName
+//     access_token
+//     */
+//    _userID         = userID;
+//    _userName       = userName;
+//    _access_token   = access_token;
+//    NSLog(@"loginSuccess = %@", userName);
+//    dispatch_block_t block = ^{
+//        //======== TEST =========//
+//        /*
+//        GameInfo *info = [GosuSDK sharedInstance].gameInfo;
+//        NSLog(@"ProviderID = %@, userID = %@, userName=%@", info.providerid, userID, userName);
+//         */
+//        
+//        //=== use for testDemo SDK ===//
+//        if (true) {
+//            self.lblName.text = userID;
+//            //set hidden all button
+//            [self.viewVaoGame setHidden:YES];
+//            [self.btn_invitefriend setHidden:NO];
+//            [self.btn_report setHidden:NO];
+//            [self.btn_Floating setHidden:NO];
+//            [self.btn_shareVideo setHidden:NO];
+//            [self.btn_clear setHidden:NO];
+//            [self.btn_IAP setHidden:NO];
+//            
+//            [self.btn_clear setTitle:@"(9) Logout" forState:UIControlStateNormal];
+//            
+//            [self callGTrackingExample];
+//        }
+//    };
+//    //
+//    if ([NSThread isMainThread]) {
+//        block();
+//    } else {
+//        dispatch_sync(dispatch_get_main_queue(), block);
+//    }
+//}
+- (void)loginSuccess:(NSDictionary *)loginData
 {
     //result for game
     /*
      userID
      userName
      access_token
+     auth_checksum
+     auth_timestamp
      */
-    _userID         = userID;
-    _userName       = userName;
-    _access_token   = access_token;
-    NSLog(@"loginSuccess = %@", userName);
-    dispatch_block_t block = ^{
-        //======== TEST =========//
-        /*
-        GameInfo *info = [GosuSDK sharedInstance].gameInfo;
-        NSLog(@"ProviderID = %@, userID = %@, userName=%@", info.providerid, userID, userName);
-         */
-        
-        //=== use for testDemo SDK ===//
-        if (true) {
-            self.lblName.text = userID;
-            //set hidden all button
-            [self.viewVaoGame setHidden:YES];
-            [self.btn_invitefriend setHidden:NO];
-            [self.btn_report setHidden:NO];
-            [self.btn_Floating setHidden:NO];
-            [self.btn_shareVideo setHidden:NO];
-            [self.btn_clear setHidden:NO];
-            [self.btn_IAP setHidden:NO];
-            
-            [self.btn_clear setTitle:@"(9) Logout" forState:UIControlStateNormal];
-            
-            [self callGTrackingExample];
+    
+    _userID         = loginData[@"user_id"];
+    _userName       = loginData[@"user_name"];
+    _access_token   =  loginData[@"auth_token"];
+    _auth_checksum   = loginData[@"auth_checksum"];
+    _auth_timestamp  = loginData[@"auth_timestamp"];
+        NSLog(@"loginSuccess = %@", _userName);
+        dispatch_block_t block = ^{
+            //======== TEST =========//
+            /*
+            GameInfo *info = [GosuSDK sharedInstance].gameInfo;
+            NSLog(@"ProviderID = %@, userID = %@, userName=%@", info.providerid, userID, userName);
+             */
+    
+            //=== use for testDemo SDK ===//
+            if (true) {
+                self.lblName.text = _userID;
+                //set hidden all button
+                [self.viewVaoGame setHidden:YES];
+                [self.btn_invitefriend setHidden:NO];
+                [self.btn_report setHidden:NO];
+                [self.btn_Floating setHidden:NO];
+                [self.btn_shareVideo setHidden:NO];
+                [self.btn_clear setHidden:NO];
+                [self.btn_IAP setHidden:NO];
+                [self.btn_topup setHidden:NO];
+                [self.btn_clear setTitle:@"(9) Logout" forState:UIControlStateNormal];
+    
+                [self callGTrackingExample];
+            }
+        };
+        //
+        if ([NSThread isMainThread]) {
+            block();
+        } else {
+            dispatch_sync(dispatch_get_main_queue(), block);
         }
-    };
-    //
-    if ([NSThread isMainThread]) {
-        block();
-    } else {
-        dispatch_sync(dispatch_get_main_queue(), block);
-    }
 }
-
 - (void)loginFail:(NSString *)message
 {
     dispatch_block_t block = ^{
@@ -107,6 +156,7 @@
     [_btn_shareVideo setHidden:YES];
     [_btn_clear setHidden:YES];
     [_btn_IAP setHidden:YES];
+    [_btn_topup setHidden:YES];
     [_aiv_loading stopAnimating];
     //
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(displayFCMToken:) name:@"FCMToken" object:nil];
@@ -149,7 +199,25 @@
     else
         [popup showFromRect:_btn_IAP.frame inView:self.view animated:YES];
 }
+//=========== WebView TopUp Test ==============//
+- (IBAction) callTopUp:(id)sender
+{
+    // Create test topup object
+    GameItemWebTopupObject *topupInfo = [[GameItemWebTopupObject alloc] init];
+    
+    // Set test data
+//    topupInfo.characterID = @"10000331";
+//    topupInfo.characterName = @"SimbaNguyen";
+//    topupInfo.serverID = @"200";
+//    topupInfo.productID = @"com.cmc.dragonsaga.250";
+//    topupInfo.productName = @"250 YB";
+//    topupInfo.amount = @"1";
+//    topupInfo.extraInfo = @"99991742458522940|59";
+        
 
+    // Show topup with listener
+    [GinSDK showTopUp:topupInfo andListener:self];
+}
 - (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
     if(buttonIndex >= 3)
         return;
@@ -279,6 +347,7 @@
     [_btn_shareVideo setHidden:YES];
     [_btn_clear setHidden:YES];
     [_btn_IAP setHidden:YES];
+    [_btn_topup setHidden:YES];
     [[GinSDK sharedInstance] IDSignOut:nil];
     [[GinSDK sharedInstance] showSignInView:self andResultDelegate:self];
 }

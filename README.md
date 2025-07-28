@@ -2,6 +2,8 @@
 
 [![Platforms](https://img.shields.io/cocoapods/p/FBSDKCoreKit.svg)]()
 
+> **⚠️ BREAKING CHANGES in v2.0.0**: The `loginSuccess` delegate method signature has changed. Please see the [Migration Guide](#initialize-sdk-delegate) below for updated implementation.
+
 **This guide shows you how to integrate your iOS app using the GinSDK for iOS. The GinSDK for iOS consists of the following component SDKs:**
   - The GinSDK Core
   - Third-party framework: 
@@ -13,7 +15,9 @@
 ### FEATURES:
   - Login: Authenticate people with their my server ID, Google and Facebook credentials.
   - Payment IAP: Pay to buy products from in-app
+  - **WebView TopUp (New in 2.0.0)**: Enhanced web-based top-up system with comprehensive validation
   - Track Events: Track events with third parties including Appsflyer and Firebase tracking
+  - **Enhanced Privacy Compliance**: App Store privacy manifest and enhanced data protection
   - You will need some included keys: GameClientID, GameSDKSignature, GoogleAppID, FacebookAppID, FacebookClientToken and GoogleService-Info.plist file
 
 # Try It Out
@@ -279,7 +283,13 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 ```objectivec
 //MainViewController.m
 #pragma Login Delegate
-- (void)loginSuccess:(NSString *)userID andUserName:(NSString *)userName andAccessToken:(NSString *)access_token {
+- (void)loginSuccess:(NSDictionary *)loginData {
+    NSString *userID = loginData[@"user_id"];
+    NSString *userName = loginData[@"user_name"];
+    NSString *accessToken = loginData[@"auth_token"];
+    NSString *checksum = loginData[@"auth_checksum"];
+    NSString *timestamp = loginData[@"auth_timestamp"];
+    // Your implementation here
 }
 - (void)loginFail:(NSString *)message {
 }
@@ -327,6 +337,45 @@ IAPDataRequest *iapData = [[IAPDataRequest alloc]
 [[GinSDK sharedInstance] showIAP:(IAPDataRequest *)iapData andMainView:self andIAPDelegate:self];
 //andMainView: use as main view controller
 //andIAPDelegate: use as IAP Delegate
+```
+
+## Using WebView TopUp (New in 2.0.0)
+*** New WebView-based TopUp system for enhanced user experience
+  
+```objectivec
+// Create TopUp data object
+GameItemWebTopupObject *topupInfo = [[GameItemWebTopupObject alloc] init];
+
+// Set required parameters (these will be provided by your game server)
+topupInfo.characterID = @"character_id";
+topupInfo.characterName = @"character_name";
+topupInfo.serverID = @"server_id";
+topupInfo.productID = @"product_id";
+topupInfo.productName = @"product_name";
+topupInfo.amount = @"amount";
+topupInfo.extraInfo = @"extra_info";
+
+// Show TopUp with listener
+[GinSDK showTopUp:topupInfo andListener:self];
+```
+
+### TopUp Delegate Methods
+```objectivec
+//MainViewController.h - Add IGameTopupListener protocol
+@interface MainViewController:UIViewController<UIActionSheetDelegate, SKProductsRequestDelegate, LoginDelegate, LogoutDelegate, IAPDelegate, IGameTopupListener> {
+}
+
+//MainViewController.m - Implement TopUp delegate methods
+#pragma TopUp Delegate
+- (void)topUpSuccess:(NSString *)message {
+    NSLog(@"TopUp Success: %@", message);
+}
+- (void)topUpFailed:(NSString *)errorMessage {
+    NSLog(@"TopUp Failed: %@", errorMessage);
+}
+- (void)topUpCancelled {
+    NSLog(@"TopUp Cancelled by user");
+}
 ```
 
 # API Tracking Events
