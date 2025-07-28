@@ -19,7 +19,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Demo(v.142)</string>
+	<string>Demo(v.200)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -50,7 +50,7 @@
 	<key>FacebookDisplayName</key>
 	<string>Liên Minh Bảo Bối</string>
 	<key>GameClientID</key>
-	<string>9952_samplevalue</string>
+	<string>9977.clientid</string>
 	<key>GameSdkSignature</key>
 	<string>xvdxciykvxuffvntivpj</string>
 	<key>GoogleAppID</key>
