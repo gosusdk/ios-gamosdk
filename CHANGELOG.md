@@ -4,13 +4,6 @@
 
 ### 🚀 New Features
 
-#### WebView TopUp System
-- **New API**: `+ (void) showTopUp:(GameItemWebTopupObject *) topUpInfo andListener:(id<IGameTopupListener>) listener`
-- **Classes Added**: 
-  - `GameItemWebTopupObject`: TopUp transaction data object
-  - `IGameTopupListener`: TopUp event callback protocol
-- **Features**: Built-in validation, error handling, and comprehensive callback system
-
 #### User Scope Validation System
 - **Government Compliance**: Enhanced user authentication system to comply with national government regulations
 - **User Verification**: Improved user identity verification process according to government decree requirements
@@ -59,9 +52,6 @@
     ```
 
 #### API Changes
-- **TopUp Method Signature**: Changed from instance method to class method
-  - **Old**: Instance method implementation
-  - **New**: `+ (void) showTopUp:(GameItemWebTopupObject *) topUpInfo andListener:(id<IGameTopupListener>) listener`
 
 #### Framework Dependencies
 - **ITS SDK Requirement**: Now requires ITS SDK 1.1.2 framework
@@ -91,13 +81,11 @@
    }
    ```
 
-2. **TopUp Integration**: Update to new class method signature
-3. **ITS Framework Integration**: Ensure ITS SDK 1.1.2 frameworks are included  
-4. **Privacy Manifest**: Add privacy declarations to your app
-5. **Build Configuration**: Update build scripts and framework dependencies
+2. **ITS Framework Integration**: Ensure ITS SDK 1.1.2 frameworks are included  
+3. **Privacy Manifest**: Add privacy declarations to your app
+4. **Build Configuration**: Update build scripts and framework dependencies
 
 #### Optional Features
-- **WebView TopUp System**: Backward compatible - can be adopted gradually
 - **Enhanced Scope Validation**: Backward compatible with improved security
 - **ITS Analytics**: Automatic integration - no code changes required for basic usage
 
