@@ -134,6 +134,25 @@
 * In the key FacebookClientToken, replace CLIENT-TOKEN 
 * In the key FacebookDisplayName, replaceAPP-NAME with the name of provided.
 
+* NOTE: Just use 1 CFBundleURLSchemes key for both GoogleSignIn and FacebookSignIn URLs.
+```xml
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>fbFacebookAppID</string>
+        </array>
+    </dict>
+    <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>com.googleusercontent.apps.1234567890-abcdefg</string>
+        </array>
+    </dict>
+</array>
+```
+
 ### Configure ItsSDK in your project (default info.plist)
 - Configure ItsSDK module tracking into .plist file (default: info.plist)*. IN the <string> tag, keys config will be provided privately via email
   ```xml
@@ -154,6 +173,18 @@
 	  <key>AirbAppToken</key>
 	  <string>sample_value</string>
   ```
+
+### Add a Bridging Header file if your project does not use Swift.
+- Xcode -> New -> File from Template... -> Header File -> Done
+
+### If your project uses SignIn with AppleID, add the following key-value pairs to your .entitlements file.
+```xml
+    <key>com.apple.developer.applesignin</key>
+    <array>
+        <string>Default</string>
+    </array>
+```
+
 ### Add services and SDK related resource library
 1. The file Appdelegate.m configuration instructions are as follows:
 ```objectivec
