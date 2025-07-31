@@ -142,11 +142,6 @@
         <key>CFBundleURLSchemes</key>
         <array>
             <string>fbFacebookAppID</string>
-        </array>
-    </dict>
-    <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
             <string>com.googleusercontent.apps.1234567890-abcdefg</string>
         </array>
     </dict>
