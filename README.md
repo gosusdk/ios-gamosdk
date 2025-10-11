@@ -1,4 +1,5 @@
 # IOS GinSDK
+> **⚠️ BREAKING CHANGES in v2.0.1**: Airbrigde Tracking module had removed.
 
 [![Platforms](https://img.shields.io/cocoapods/p/FBSDKCoreKit.svg)]()
 
@@ -9,13 +10,12 @@
   - Third-party framework: 
       - GoogleSigin SDK, Firebase SDK, Facebook SDK, AppsFlyer SDK
       - Grpc Framework (GRPCClient, ProtoBuf, ProtoRPC, RxLibrary, ...)
-      - Download at : (https://drive.google.com/file/d/13SCWP358SnJkMjP7m2rTd458Cc449Won/view?usp=drive_link)
-  - Ios version support: 11+
+      - Download at : (https://drive.google.com/file/d/1tRDH7nnd4pcozV_b1BVCOdEH8LBYDnHd/view?usp=sharing)
+  - Ios version support: 13+
   
 ### FEATURES:
   - Login: Authenticate people with their my server ID, Google and Facebook credentials.
   - Payment IAP: Pay to buy products from in-app
-  - **WebView TopUp (New in 2.0.0)**: Enhanced web-based top-up system with comprehensive validation
   - Track Events: Track events with third parties including Appsflyer and Firebase tracking
   - **Enhanced Privacy Compliance**: App Store privacy manifest and enhanced data protection
   - You will need some included keys: GameClientID, GameSDKSignature, GoogleAppID, FacebookAppID, FacebookClientToken and GoogleService-Info.plist file
@@ -156,16 +156,6 @@
 	  <key>ItsSigningKey</key>
 	  <string>sample_value</string>
 	  <key>ItsWriteKey</key>
-	  <string>sample_value</string>
-  ```
-### Configure AirBidge in your project (default info.plist)
-- Configure AirBidgeSDK module tracking into .plist file (default: info.plist)*. IN the <string> tag, keys config will be provided privately via email
-  ```xml
-	  <key>AirbAppEnv</key>
-	  <string></string>
-	  <key>AirbAppName</key>
-	  <string>sample_value</string>
-	  <key>AirbAppToken</key>
 	  <string>sample_value</string>
   ```
 
