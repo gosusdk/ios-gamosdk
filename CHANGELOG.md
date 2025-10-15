@@ -1,5 +1,35 @@
 # iOS GinSDK Changelog
 
+## [2.0.1] - 2025-10-11
+
+### 🔧 System Improvements
+
+#### Third-Party Library Optimization
+- **Airbridge Library Removal**: Completely removed Airbridge tracking library from the SDK
+- **SDK Size Reduction**: Significantly reduced SDK bundle size by eliminating Airbridge dependencies
+- **Performance Improvement**: Enhanced SDK initialization and runtime performance
+- **Privacy Enhancement**: Improved user privacy by removing additional tracking components
+
+### 🛠️ Technical Changes
+
+#### Framework Dependencies
+- **Removed Dependencies**: Airbridge tracking framework no longer required
+- **Cleaner Integration**: Simplified framework integration process for developers
+- **Reduced Complexity**: Streamlined SDK architecture with fewer external dependencies
+
+### 📋 Migration Notes
+
+#### For Existing Implementations
+- **No Code Changes Required**: This update is fully backward compatible
+- **Automatic Benefits**: Existing integrations will automatically benefit from reduced SDK size and improved performance
+- **Framework Cleanup**: Developers can optionally remove Airbridge frameworks from their projects if not used elsewhere
+
+#### Build Configuration
+- **Framework References**: Remove Airbridge framework references from build settings if no longer needed
+- **Bundle Size**: Expect reduced app bundle size after updating to version 2.0.1
+
+---
+
 ## [2.0.0] - 2025-07-25
 
 ### 🚀 New Features
