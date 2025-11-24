@@ -1,5 +1,89 @@
 # iOS GinSDK Changelog
 
+## [2.0.2] - 2025-11-24
+
+### 🚀 New Features
+
+#### AppsFlyer Integration
+- **AppsFlyer Tracking Module**: Added comprehensive AppsFlyer SDK integration for advanced attribution and analytics
+- **Native iOS Support**: Full iOS AppsFlyer SDK integration with Objective-C compatibility
+
+#### Enhanced SDK Initialization
+- **GinSDKOptions Configuration**: Introduced flexible SDK initialization options with modular enable/disable controls
+  - **Module Control**: Enable/disable specific tracking modules using configuration options
+    - `enableAppsFlyer` - Control AppsFlyer integration (YES/NO)
+    - `enableITS` - Control ITS tracking module (YES/NO) 
+    - `enableFirebase` - Control Firebase Analytics (YES/NO)
+
+### 🔧 Enhanced Features
+
+#### Initialization Flow
+- **Improved SDK Setup**: Enhanced SDK initialization with configurable options
+  - Better error handling and validation
+  - Asynchronous initialization support
+  - Backward compatibility with existing initialization methods
+- **Configuration Validation**: Built-in validation for module configurations
+- **Performance Optimization**: Only load enabled modules to reduce app overhead
+
+### 📋 Configuration Updates
+
+#### AppsFlyer Dependencies
+- **Framework Integration**: 
+```
+  third-party/libs/AppsFlyer(6.17.7)/AppsFlyerLib.xcframework
+```
+#### SDK Options Configuration
+- **Objective-C Implementation**:
+  ```objectivec
+  GinSDKOptions *options = [[GinSDKOptions alloc] init];
+  options.enableAppsFlyer = YES;
+  options.enableFirebase = YES;
+  options.enableITS = YES;
+  [GinSDK initializeWithOptions:options delegate:self];
+  ```
+  
+#### Plist Configuration
+- **AppsFlyer Settings**: New plist configuration keys
+  ```xml
+  <key>AppsflyerAppleID</key>
+  <string>YOUR_APPLE_APP_ID</string>
+  ```
+
+### 🛠️ Technical Improvements
+
+#### Analytics Integration
+- **Unified Analytics**: Consolidated analytics interface supporting multiple providers
+- **Event Tracking**: Enhanced event tracking with AppsFlyer attribution
+- **Deep Linking**: AppsFlyer deep linking and deferred deep linking support
+- **Attribution Data**: Real-time attribution data access through SDK callbacks
+
+#### Framework Management
+- **XCFramework**: AppsFlyer included as XCFramework for better compatibility
+- **Privacy Compliance**: Enhanced privacy manifest updates for AppsFlyer integration
+- **App Store Compliance**: Full App Store review guidelines compliance
+
+### 🔄 Migration Notes
+
+#### For Existing Implementations
+- **Backward Compatibility**: Existing implementations continue to work without changes
+- **Optional Migration**: Gradual adoption of new modular configuration system
+- **Performance Benefits**: Automatic performance improvements with module-based loading
+
+#### New Integration Steps
+1. **Update SDK**: Upgrade to GinSDK 2.0.2
+2. **Configure Options**: Implement GinSDKOptions for modular control
+3. **AppsFlyer Setup**: Add AppsFlyer configuration keys to Info.plist
+4. **Test Integration**: Verify module functionality and attribution tracking
+
+**This guide shows you how to integrate your iOS app using the GinSDK for iOS. The GinSDK for iOS consists of the following component SDKs:**
+  - The GinSDK Core
+  - Third-party framework: 
+      - GoogleSigin SDK, Firebase SDK, Facebook SDK, AppsFlyer SDK
+      - Grpc Framework (GRPCClient, ProtoBuf, ProtoRPC, RxLibrary, ...)
+      - Download at : (https://drive.google.com/file/d/18R6kx4lN4rJbM7-zyLabR0aAo2LUZ5Y6/view?usp=sharing)
+  - Ios version support: 13+
+---
+
 ## [2.0.1] - 2025-10-11
 
 ### 🔧 System Improvements

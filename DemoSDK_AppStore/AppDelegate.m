@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 //for SDK
 #import "GinSDK.h"
+#import "SdkOption.h"
 #import <UserNotifications/UserNotifications.h>
 #import "FirebaseManager.h"
 @import FBSDKLoginKit;
@@ -31,9 +32,14 @@ NSString *const kGCMMessageIDKey = @"gcm.message_id";
     
     //init SDK
     NSLog(@"DEMLOG = 1");
-    
+    //
+    SdkOption *option = [[SdkOption alloc] init];
+    option.enableIts = YES;
+    option.enableFirebase = YES;
+    option.enableAppsflyer = NO;
+    //
     //GinSDK
-    [[GinSDK sharedInstance] initSdk:^(NSString *initStatus) {
+    [[GinSDK sharedInstance] initSdkWithOption:option andInitStatus:^(NSString *initStatus) {
         NSLog(@"initStatus = %@", initStatus);
         if ([initStatus isEqual:@"success"]) {
             NSLog(@"Gin init ok");
