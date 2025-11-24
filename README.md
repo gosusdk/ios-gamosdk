@@ -17,8 +17,12 @@
   - Login: Authenticate people with their my server ID, Google and Facebook credentials.
   - Payment IAP: Pay to buy products from in-app
   - Track Events: Track events with third parties including Appsflyer and Firebase tracking
+  - **Modular SDK Initialization (New in v2.0.2)**: Enhanced SDK initialization with configurable tracking modules
+    - Individual module control: Enable/disable AppsFlyer, Firebase, and ITS tracking
+    - Performance optimization: Only load enabled modules
+    - Backward compatibility: Traditional initialization still supported
   - **Enhanced Privacy Compliance**: App Store privacy manifest and enhanced data protection
-  - You will need some included keys: GameClientID, GameSDKSignature, GoogleAppID, FacebookAppID, FacebookClientToken and GoogleService-Info.plist file
+  - You will need some included keys: GameClientID, GameSDKSignature, GoogleAppID, FacebookAppID, FacebookClientToken, AppsFlyerDevKey and GoogleService-Info.plist file
 
 # Try It Out
 
@@ -159,6 +163,13 @@
 	  <string>sample_value</string>
   ```
 
+### Configure AppsFlyer in your project (default info.plist)
+- Configure AppsFlyer module tracking into .plist file (default: info.plist)*. Keys config will be provided privately via email
+  ```xml
+	  <key>AppsflyerAppleID</key>
+	  <string>YOUR_APPLE_APP_ID</string>
+  ```
+
 ### Add a Bridging Header file if your project does not use Swift.
 - Xcode -> New -> File from Template... -> Header File -> Done
 
@@ -290,6 +301,32 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
     //...
 }
 ```
+
+## Initialize GinSDK with Options (New in v2.0.2)
+### Objective-C Implementation
+```objectivec
+#import "GinSDK.h"
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Create SDK options with modular control
+    GinSDKOptions *options = [[GinSDKOptions alloc] init];
+    options.enableAppsFlyer = YES;  // Enable AppsFlyer tracking
+    options.enableFirebase = YES;   // Enable Firebase Analytics
+    options.enableITS = YES;        // Enable ITS tracking
+    
+    // Initialize SDK with options
+    [[GinSDK sharedInstance] initSdkWithOptions:options completion:^(NSString *initStatus) {
+        NSLog(@"initStatus = %@", initStatus);
+        if ([initStatus isEqual:@"success"]) {
+            NSLog(@"Gin init with options ok");
+        } else {
+            NSLog(@"Gin init with options failed");
+        }
+    }];
+    //...
+}
+```
+**Note**: The traditional `initSdk:` method remains available for backward compatibility. The new `initSdkWithOptions:` provides enhanced control over which tracking modules to enable.
+
 ## Initialize SDK delegate
 ```objectivec
 //MainViewController.h
