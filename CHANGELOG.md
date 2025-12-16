@@ -1,4 +1,29 @@
 # iOS GinSDK Changelog
+## [2.0.3]
+
+### 🐛 Bug Fixes
+
+#### OpenGameLog API Integration
+- **OpenGameLog on SDK Init**: Added automatic OpenGameLog API call when SDK initialization succeeds
+
+#### Logout API Request
+- **ClientID Missing in Logout Request**: Fixed logout API request not including ClientID parameter
+  - **Issue**: Logout API calls were missing the ClientID value, causing potential authentication issues
+
+### 🔧 Improvements
+
+#### Logging & Debugging
+- **Enhanced OpenGameLog Logging**: Improved log messages to distinguish between parameterized and parameterless OpenGameLog calls
+  - Changed log message from "idAppTrackingOpen" to "idAppTrackingOpen with multi params" for clarity
+  - Separate log message for parameterless version
+- **Logout Response Handling**: Added comprehensive response callback for logout operations with success/failure status
+### 🔧 Improvements
+
+#### Logging & Debugging
+- **Enhanced OpenGameLog Logging**: Improved log messages to distinguish between parameterized and parameterless OpenGameLog calls
+  - Changed log message from "idAppTrackingOpen" to "idAppTrackingOpen with multi params" for clarity
+  - Separate log message for parameterless version
+- **Logout Response Handling**: Added comprehensive response callback for logout operations with success/failure status
 
 ## [2.0.2] - 2025-11-24
 
