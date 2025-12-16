@@ -278,24 +278,11 @@
 				libs/Firebase/GoogleSignIn/GTMSessionFetcher.xcframework,
 			);
 		};
-		6230C0FF2ED4483A00E14169 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			attributesByRelativePath = {
-				GinSDK.xcframework = (
-					CodeSignOnCopy,
-					RemoveHeadersOnCopy,
-				);
-			};
-			buildPhase = CE82110F26A7C17700729078 /* Embed Frameworks */;
-			membershipExceptions = (
-				GinSDK.xcframework,
-			);
-		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6230C0652ED444E600E14169 /* third-party */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (6230C0D42ED447F800E14169 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "third-party"; sourceTree = "<group>"; };
-		6230C0CD2ED4456700E14169 /* GinSDK */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (6230C0FF2ED4483A00E14169 /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = GinSDK; sourceTree = "<group>"; };
+		6230C0CD2ED4456700E14169 /* GinSDK */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = GinSDK; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
